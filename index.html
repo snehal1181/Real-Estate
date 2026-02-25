@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Luxurious Real Estate</title>
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Poppins:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="css/home.css">
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">LUX<span style="color: var(--accent-color);">ESTATE</span></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto align-items-center">
+                    <li class="nav-item"><a class="nav-link active" href="#home">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="properties.html">Properties</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                    <li class="nav-item ms-lg-3">
+                        <button id="theme-toggle" class="btn btn-outline-secondary rounded-circle p-0">
+                            <i class="fas fa-moon"></i>
+                        </button>
+                    </li>
+                    <li class="nav-item ms-lg-2"><a href="contact.html" class="btn btn-primary">Book Consultation</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-section">
+        <div class="container text-center hero-content animate-on-scroll">
+            <h1>Discover Your <br>Dream Sanctuary</h1>
+            <p class="lead mb-4 text-white-50">Exclusive properties for the discerning few.</p>
+            <a href="#properties" class="btn btn-primary btn-lg px-5 py-3">Explore Collection</a>
+        </div>
+    </section>
+
+    <!-- Search Section -->
+    <div class="container">
+        <div class="search-box animate-on-scroll">
+            <form class="row g-3">
+                <div class="col-md-3">
+                    <label class="form-label"><i class="fas fa-map-marker-alt me-2"
+                            style="color: var(--accent-color);"></i> Location</label>
+                    <select id="search-location" class="form-select">
+                        <option selected>All Locations</option>
+                        <option>Beverly Hills</option>
+                        <option>Manhattan</option>
+                        <option>Miami Beach</option>
+                    </select>
+                </div>
+                <div class="col-md-3">
+                    <label class="form-label"><i class="fas fa-home me-2" style="color: var(--accent-color);"></i>
+                        Property Type</label>
+                    <select id="search-type" class="form-select">
+                        <option selected>All Types</option>
+                        <option>Villa</option>
+                        <option>Penthouse</option>
+                        <option>Mansion</option>
+                        <option>Apartment</option>
+                        <option>Bunglow</option>
+                        <option>Row House</option>
+                    </select>
+                </div>
+                <div class="col-md-3">
+                    <label class="form-label"><i class="fas fa-tag me-2" style="color: var(--accent-color);"></i> Price
+                        Range</label>
+                    <select id="search-price" class="form-select">
+                        <option selected>Any Price</option>
+                        <option>₹ 10 Cr - ₹ 40 Cr</option>
+                        <option>₹ 40 Cr - ₹ 80 Cr</option>
+                        <option>₹ 80 Cr + Cr</option>
+                    </select>
+                </div>
+                <div class="col-md-3 d-flex align-items-end">
+                    <button id="search-btn" type="button" class="btn btn-primary w-100 py-3"><i
+                            class="fas fa-search me-2"></i> Search</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Featured Properties -->
+    <section id="properties" class="section-padding">
+        <div class="container">
+            <div class="section-title animate-on-scroll">
+                <span>Exclusive Living</span>
+                <h2>Featured Properties</h2>
+            </div>
+            <div class="row">
+                <!-- Property 1 -->
+                <div class="col-lg-4 col-md-6 animate-on-scroll delay-100">
+                    <div class="card property-card">
+                        <div class="property-img-wrapper">
+                            <img src="https://images.unsplash.com/photo-1580587771525-78b9dba3b914?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                                alt="Villa">
+                            <span class="price-tag">₹ 45 Cr</span>
+                            <span class="property-tag">Villa</span>
+                        </div>
+                        <div class="card-body p-4">
+                            <h5 class="card-title mb-3">Modern Hills Villa</h5>
+                            <p class="text-muted mb-3"><i class="fas fa-map-marker-alt feature-icon"></i> Beverly Hills,
+                                CA</p>
+                            <div class="d-flex justify-content-between border-top pt-3 text-muted small">
+                                <span><i class="fas fa-bed feature-icon"></i> 5 Beds</span>
+                                <span><i class="fas fa-bath feature-icon"></i> 6 Baths</span>
+                                <span><i class="fas fa-ruler-combined feature-icon"></i> 4,500 sqft</span>
+                            </div>
+                            <div class="text-center mt-3">
+                                <button class="btn btn-outline-dark" data-bs-toggle="modal"
+                                    data-bs-target="#propertyDetailModal" data-title="Modern Hills Villa"
+                                    data-price="₹ 45 Cr" data-location="Beverly Hills, CA" data-beds="5" data-baths="6"
+                                    data-sqft="4,500"
+                                    data-img="https://images.unsplash.com/photo-1580587771525-78b9dba3b914?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80"
+                                    data-interiors="https://images.unsplash.com/photo-1616486338812-3dadae4b4f9d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80,https://images.unsplash.com/photo-1556911220-e15b29be8c8f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80"
+                                    data-desc="An architectural masterpiece nestled in the serene hills of Beverly Hills. This modern villa boasts panoramic city views, an infinity pool, and state-of-the-art amenities for unparalleled luxury living.">View
+                                    Details</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Property 2 -->
+                <div class="col-lg-4 col-md-6 animate-on-scroll delay-200">
+                    <div class="card property-card">
+                        <div class="property-img-wrapper">
+                            <img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                                alt="Mansion">
+                            <span class="price-tag">₹ 105 Cr</span>
+                            <span class="property-tag">Mansion</span>
+                        </div>
+                        <div class="card-body p-4">
+                            <h5 class="card-title mb-3">Oceanfront Estate</h5>
+                            <p class="text-muted mb-3"><i class="fas fa-map-marker-alt feature-icon"></i> Miami Beach,
+                                FL</p>
+                            <div class="d-flex justify-content-between border-top pt-3 text-muted small">
+                                <span><i class="fas fa-bed feature-icon"></i> 8 Beds</span>
+                                <span><i class="fas fa-bath feature-icon"></i> 10 Baths</span>
+                                <span><i class="fas fa-ruler-combined feature-icon"></i> 12,000 sqft</span>
+                            </div>
+                            <div class="text-center mt-3">
+                                <button class="btn btn-outline-dark" data-bs-toggle="modal"
+                                    data-bs-target="#propertyDetailModal" data-title="Oceanfront Estate"
+                                    data-price="₹ 105 Cr" data-location="Miami Beach, FL" data-beds="8" data-baths="10"
+                                    data-sqft="12,000"
+                                    data-img="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80"
+                                    data-interiors="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80,https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80"
+                                    data-desc="Experience the ultimate coastal lifestyle in this breathtaking oceanfront estate. Featuring direct beach access, a private dock, and expansive outdoor entertaining areas, this property is a true tropical paradise.">View
+                                    Details</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Property 3 -->
+                <div class="col-lg-4 col-md-6 animate-on-scroll delay-300">
+                    <div class="card property-card">
+                        <div class="property-img-wrapper">
+                            <img src="https://plus.unsplash.com/premium_photo-1682377521753-58d1fd9fa5ce?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Desert Oasis">
+                            <span class="price-tag">₹ 55 Cr</span>
+                            <span class="property-tag">Villa</span>
+                        </div>
+                        <div class="card-body p-4">
+                            <h5 class="card-title mb-3">Modern Desert Oasis</h5>
+                            <p class="text-muted mb-3"><i class="fas fa-map-marker-alt feature-icon"></i> Scottsdale, AZ
+                            </p>
+                            <div class="d-flex justify-content-between border-top pt-3 text-muted small">
+                                <span><i class="fas fa-bed feature-icon"></i> 4 Beds</span>
+                                <span><i class="fas fa-bath feature-icon"></i> 5 Baths</span>
+                                <span><i class="fas fa-ruler-combined feature-icon"></i> 5,500 sqft</span>
+                            </div>
+                            <div class="text-center mt-3">
+                                <button class="btn btn-outline-dark" data-bs-toggle="modal"
+                                    data-bs-target="#propertyDetailModal" data-title="Modern Desert Oasis"
+                                    data-price="₹ 55 Cr" data-location="Scottsdale, AZ" data-beds="4" data-baths="5"
+                                    data-sqft="5,500"
+                                    data-img="https://images.unsplash.com/photo-1593854524168-3a15996855b3?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80"
+                                    data-interiors="https://images.unsplash.com/photo-1598928506311-c55ded91a20c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80,https://images.unsplash.com/photo-1560185127-6ed189bf02f4?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80,https://images.unsplash.com/photo-1564013799919-ab600027ffc6?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80,https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80"
+                                    data-desc="A stunning example of desert modernism, this home seamlessly blends indoor and outdoor living. Enjoy breathtaking mountain views from the expansive patio with a negative-edge pool and fire pit.">View
+                                    Details</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center mt-5 animate-on-scroll">
+                <a href="properties.html" class="btn btn-primary btn-lg px-5">View All Properties</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section-padding bg-light">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6 mb-4 mb-lg-0 animate-on-scroll">
+                    <img src="https://images.unsplash.com/photo-1582268611958-ebfd161ef9cf?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                        class="img-fluid rounded shadow-lg" alt="About Us">
+                </div>
+                <div class="col-lg-6 ps-lg-5 animate-on-scroll delay-200">
+                    <div class="section-title text-start mb-4">
+                        <span>About Us</span>
+                        <h2>Redefining Luxury Real Estate</h2>
+                    </div>
+                    <p class="lead mb-4">We specialize in connecting extraordinary people with extraordinary properties.
+                    </p>
+                    <p class="text-muted mb-4">With over 20 years of experience in the luxury market, our team provides
+                        unparalleled service and access to the most exclusive listings in the world. Whether you are
+                        buying or selling, we ensure a seamless and discreet experience tailored to your lifestyle.</p>
+                    <a href="about.html" class="btn btn-outline-dark px-4 py-2">Learn More</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 mb-5 mb-lg-0">
+                    <a class="navbar-brand text-white mb-4 d-block" href="#">LUX<span
+                            style="color: var(--accent-color);">ESTATE</span></a>
+                    <p class="mb-4">The premier destination for luxury properties worldwide. Find your perfect home with
+                        us.</p>
+                    <div class="social-links">
+                        <a href="#" class="me-3"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="me-3"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="me-3"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="me-3"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-6 mb-4 mb-md-0">
+                    <h5>Quick Links</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#properties">Properties</a></li>
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+                    <h5>Contact Info</h5>
+                    <ul class="list-unstyled">
+                        <li><i class="fas fa-map-marker-alt me-2"></i> 123 Luxury Lane, Beverly Hills</li>
+                        <li><i class="fas fa-phone me-2"></i> +1 (555) 123-4567</li>
+                        <li><i class="fas fa-envelope me-2"></i> info@luxestate.com</li>
+                    </ul>
+                </div>
+                <div class="col-lg-3">
+                    <h5>Newsletter</h5>
+                    <p>Subscribe for the latest updates.</p>
+                    <div class="input-group mb-3">
+                        <input type="text" class="form-control rounded-0 border-0" placeholder="Email Address">
+                        <button class="btn btn-primary" type="button">Join</button>
+                    </div>
+                </div>
+            </div>
+            <hr class="border-secondary mt-5 mb-4">
+            <div class="text-center">
+                <p class="mb-0 small">&copy; 2023 LuxEstate. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <div class="modal fade" id="propertyDetailModal" tabindex="-1" aria-labelledby="propertyDetailModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header border-0">
+                    <h5 class="modal-title" id="propertyDetailModalLabel">Property Details</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body p-0">
+                    <div id="propertyCarousel" class="carousel slide" data-bs-ride="carousel">
+                        <div class="carousel-inner" id="carousel-inner">
+                            <!-- Images injected via JS -->
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#propertyCarousel"
+                            data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#propertyCarousel"
+                            data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Next</span>
+                        </button>
+                    </div>
+                    <div class="p-4">
+                        <h3 id="modal-title" class="mb-2"></h3>
+                        <h4 id="modal-price" class="mb-3" style="color: var(--accent-color);"></h4>
+                        <p class="mb-3"><i class="fas fa-map-marker-alt feature-icon"></i> <span
+                                id="modal-location"></span></p>
+                        <div class="d-flex justify-content-start mb-4 text-muted">
+                            <span class="me-4"><i class="fas fa-bed feature-icon"></i> <span id="modal-beds"></span>
+                                Beds</span>
+                            <span class="me-4"><i class="fas fa-bath feature-icon"></i> <span id="modal-baths"></span>
+                                Baths</span>
+                            <span><i class="fas fa-ruler-combined feature-icon"></i> <span id="modal-sqft"></span>
+                                sqft</span>
+                        </div>
+                        <p id="modal-desc" class="text-muted"></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom JS -->
+    <script src="main.js"></script>
+</body>
+
+</html>
