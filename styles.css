@@ -112,8 +112,8 @@ h1, h2, h3, h4, h5, h6, .navbar-brand {
     margin-left: 1.5rem;
     transition: color 0.3s;
 }
-.nav-link:hover, .nav-link.active {
-    color: var(--accent-color);
+.navbar .nav-link:hover, .navbar .nav-link.active {
+    color: var(--accent-color) !important;
 }
 .btn-primary {
     background-image: linear-gradient(to right, var(--accent-color) 0%, #5a0e0b 51%, var(--accent-color) 100%);
