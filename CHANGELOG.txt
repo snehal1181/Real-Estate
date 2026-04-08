@@ -1,0 +1,129 @@
+CHANGELOG
+=========
+All notable changes to the LuxEstate project are documented in this file.
+Format is based on Keep a Changelog (https://keepachangelog.com/en/1.0.0/).
+
+================================================================================
+[Unreleased]
+================================================================================
+  - Potential integration with a back-end API for live property listings.
+  - User authentication and saved favourites functionality.
+  - Interactive map view for property locations.
+  - Virtual tour / 360° image viewer.
+
+================================================================================
+[1.5.0] - 2026-04-05
+================================================================================
+CHANGED
+  - Cleaned up unused/redundant project files to streamline the repository.
+  - Verified removal of orphaned assets did not impact site functionality or
+    design.
+
+================================================================================
+[1.4.0] - 2026-04-03
+================================================================================
+ADDED
+  - Toast notifications when items are removed from favourites or the cart.
+  - Border-radius (50px pill shape) applied to the "Send Message" button on the
+    Contact page for visual consistency with all other CTA buttons.
+
+FIXED
+  - Reverted unintended background style changes introduced in a prior session.
+
+================================================================================
+[1.3.0] - 2026-04-02
+================================================================================
+ADDED
+  - Premium "Silk & Gold" animated canvas background implemented globally
+    across all pages.
+  - Frosted-glass effect applied to all content sections to ensure readability
+    over the animated background.
+
+FIXED
+  - Resolved issue where the animation overlay incorrectly blocked user
+    interaction with page content.
+
+================================================================================
+[1.2.0] - 2026-04-01
+================================================================================
+ADDED
+  - Luxury "Diamond Glimmer" canvas-based particle animation engine.
+    - Twinkling diamond and gold dust particles react to mouse movement.
+    - High-performance, RAF-based render loop for 60fps animation.
+  - Global page loading indicator (preloader) with animated SVG home icon
+    ("Loading Excellence" text):
+    - Waving concentric circle rings.
+    - Outlined house/home path icon in the centre.
+  - Dark / Light theme toggle button (moon/sun icon) in the navbar.
+    - User preference persisted in `localStorage`.
+
+REPLACED
+  - Basic CSS particle animation replaced with the new Canvas-based Diamond
+    Glimmer effect for a significantly more premium aesthetic.
+
+================================================================================
+[1.1.0] - 2026-03-31
+================================================================================
+ADDED
+  - Properties page (properties.html):
+    - Full property catalogue with 12+ listings.
+    - Client-side filter bar (location, type, price range).
+    - URL-parameter-based search routing from the Home page search box.
+    - Pagination control (6 properties per page) with prev/next navigation.
+    - "No results found" empty state with clear-filter action.
+    - "Clear Filters" button displayed only when active filters are applied.
+  - Property Detail Modal (available on both Home and Properties pages):
+    - Full-screen Bootstrap modal with image carousel (exterior + interiors).
+    - Displays: title, price, location, beds, baths, sqft, and description.
+    - Images dynamically injected via JavaScript data attributes.
+  - Cart / Add-to-Cart page with professional luxury layout:
+    - Two-column grid: cart items list + order summary sidebar.
+    - Trust badges (secure payment, free consultation, verified listings).
+    - Quantity adjustment and item removal controls.
+
+IMPROVED
+  - Standardised all property card image dimensions for visual consistency.
+  - Enhanced overall cart page design to match the premium brand identity.
+
+================================================================================
+[1.0.0] - 2026-03-30 — Initial Release
+================================================================================
+ADDED
+  - index.html — Homepage:
+    - Full-screen auto-playing hero slider (3 images, 5-second interval).
+    - Integrated property search box (location, type, price dropdowns).
+    - Featured Properties section (3 highlight cards).
+    - About Us teaser section with CTA to the About page.
+    - Footer with quick links, contact info, and newsletter signup.
+  - about.html — About Us page:
+    - Founder section (James Sterling bio + signature).
+    - Mission & Vision cards.
+    - Team section (Eleanor Rigby — Senior Broker, Michael Chen — Head of
+      Sales, Sarah Jenkins — Luxury Consultant) with social links.
+  - contact.html — Contact page:
+    - Contact form (name, email, phone, message, submit button).
+    - Office address, phone, and email details.
+    - Book Consultation CTA.
+  - styles.css — Global shared stylesheet:
+    - CSS custom properties (color palette, typography tokens).
+    - Navbar scroll effect styles.
+    - Shared component styles (cards, buttons, section titles, footer).
+    - Dark theme overrides via [data-theme="dark"] attribute selector.
+    - Scroll-animation utility classes (.animate-on-scroll, .visible,
+      staggered delay variants).
+  - main.js — Shared JavaScript:
+    - Preloader fade-out on window load.
+    - Hero slider auto-play logic.
+    - Navbar shadow + padding transition on scroll.
+    - Dark/light theme toggle with localStorage persistence.
+    - IntersectionObserver scroll animations.
+    - Search form → properties.html URL routing.
+    - Properties page filtering and pagination logic.
+    - Property detail modal data injection and carousel population.
+    - Mobile navbar auto-collapse on link click.
+  - css/ — Page-specific stylesheets:
+    - home.css, about.css, properties.css, contact.css
+
+================================================================================
+END OF CHANGELOG
+================================================================================
